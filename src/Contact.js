@@ -16,7 +16,7 @@ const PageComponent = () => {
   const [title] = useState("Jeydin21 | Contact");
 
   useEffect(() => {
-    document.title = title; // Set the document title
+    document.title = title;  
   }, [title]);
 
   useEffect(() => {

@@ -25,7 +25,7 @@ const Header = () => {
 
   return (
     <header style={headerStyle}>
-      <Link to="/" style={titleStyle}><h1>Jeydin21's Blog</h1></Link>
+      <Link to="/" style={titleStyle}><h1>Jeydin21</h1></Link>
       <nav>
         <ul style={navStyle}>
           <h2><li style={itemStyle}><Link to="/projects">Projects</Link></li></h2>

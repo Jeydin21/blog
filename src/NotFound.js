@@ -16,7 +16,7 @@ const PageComponent = () => {
   const [title] = useState("Jeydin21 | 404");
 
   useEffect(() => {
-    document.title = title; // Set the document title
+    document.title = title;  
   }, [title]);
 
   useEffect(() => {
