@@ -1,6 +1,4 @@
 # Welcome to my blog!
-This page was created in Markdown and loaded into a React file to be displayed in the browser.
+Welcome to my blog! This is something that I've always wanted to do, but never had the time to make. What better time to make one than winter break?
 
-**[About Me](/about)**
-
-**[Post](/post/welcome)**
+I've always been interested in making something like this, as I've started to use Markdown to take notes in school and to write essays. Why not make a website out of Markdown?

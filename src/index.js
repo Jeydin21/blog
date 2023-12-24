@@ -3,14 +3,16 @@ import ReactDOM from "react-dom";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
 import Home from "./Home";
-import About from "./About";
+import Projects from "./Projects";
+import Contact from "./Contact";
 import Post from "./Post";
 import NotFound from "./NotFound";
 
 const routes = [
   { path: "/", element: <Home />, index: true },
-  { path: "about", element: <About /> },
-  { path: "post/:postId", element: <Post /> },
+  { path: "projects", element: <Projects /> },
+  { path: "contact", element: <Contact /> },
+  { path: "posts/:postId", element: <Post /> },
 ];
 
 const rootElement = document.getElementById("root");

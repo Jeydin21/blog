@@ -1,9 +1,11 @@
 import { useEffect, useState } from "react";
 import ReactMarkdown from "react-markdown";
+import Header from "./components/Header";
 
 export default function NotFound() {
   return (
     <div className="NotFound">
+      <Header />
       <PageComponent />
     </div>
   );
