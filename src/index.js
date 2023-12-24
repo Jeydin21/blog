@@ -5,11 +5,12 @@ import ReactMarkdown from "react-markdown";
 
 import Home from "./Home";
 import About from "./About";
+import Post from "./Post";
 
 const routes = [
   { path: "/", element: <Home />, index: true },
   { path: "about", element: <About /> },
-  { path: "post/:postId", element: <BlogPost /> },
+  { path: "post/:postId", element: <Post /> },
 ];
 
 const rootElement = document.getElementById("root");
@@ -25,16 +26,3 @@ ReactDOM.render(
   </StrictMode>,
   rootElement
 );
-
-function BlogPost() {
-  const { postId } = useParams();
-  const [content, setContent] = useState("");
-
-  useEffect(() => {
-    fetch(`/pages/${postId}.md`)
-      .then((res) => res.text())
-      .then((text) => setContent(text));
-  }, [postId]);
-
-  return <ReactMarkdown children={content} />;
-}
