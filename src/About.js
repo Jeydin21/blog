@@ -13,7 +13,7 @@ const PageComponent = () => {
   const [content, setContent] = useState("");
 
   useEffect(() => {
-    fetch("/pages/About.md")
+    fetch("About.md")
       .then((res) => res.text())
       .then((text) => setContent(text));
   }, []);

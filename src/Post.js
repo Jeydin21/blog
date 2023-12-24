@@ -1,28 +1,27 @@
 import { useEffect, useState } from "react";
+import { useParams, useNavigate } from "react-router-dom";
 import ReactMarkdown from "react-markdown";
-import { useParams } from "react-router-dom";
 
 export default function Post() {
-  return (
-    <div className="Post">
-      <PageComponent />
-    </div>
-  );
-}
-
-const PageComponent = () => {
   const { postId } = useParams();
   const [content, setContent] = useState("");
+  const navigate = useNavigate();
 
   useEffect(() => {
-    fetch(`/pages/${postId}.md`)
-      .then((res) => res.text())
-      .then((text) => setContent(text));
-  }, [postId]);
+  fetch(`/pages/${postId}.md`)
+    .then((res) => {
+      if (!res.ok || res.headers.get('Content-Type').includes('text/html')) {
+        throw Error('Not found');
+      }
+      return res.text();
+    })
+    .then((text) => setContent(text))
+    .catch(() => {
+      fetch('/404.md')
+        .then((res) => res.text())
+        .then((text) => setContent(text));
+    });
+}, [postId, navigate]);
 
-  return (
-    <div className="post">
-      <ReactMarkdown children={content} />
-    </div>
-  );
-};
+  return <ReactMarkdown children={content} />;
+}

@@ -1,9 +1,9 @@
 import { useEffect, useState } from "react";
 import ReactMarkdown from "react-markdown";
 
-export default function Home() {
+export default function NotFound() {
   return (
-    <div className="Home">
+    <div className="NotFound">
       <PageComponent />
     </div>
   );
@@ -13,7 +13,7 @@ const PageComponent = () => {
   const [content, setContent] = useState("");
 
   useEffect(() => {
-    fetch("Home.md")
+    fetch("404.md")
       .then((res) => res.text())
       .then((text) => setContent(text));
   }, []);
