@@ -1,0 +1,2 @@
+# Contact Me!
+You can contact me by contacting me, which you can use any device to contact me by opening this website to go to the contact page and contact me, which ends up with you contacting me by contacting me by contacting me

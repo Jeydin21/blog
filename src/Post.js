@@ -18,7 +18,7 @@ export default function Post() {
       })
       .then((text) => setContent(text))
       .catch(() => {
-        fetch('/404.md')
+        fetch('/pages/404.md')
           .then((res) => res.text())
           .then((text) => setContent(text));
       });

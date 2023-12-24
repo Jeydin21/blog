@@ -13,9 +13,14 @@ export default function About() {
 
 const PageComponent = () => {
   const [content, setContent] = useState("");
+  const [title] = useState("Jeydin21 | Projects");
 
   useEffect(() => {
-    fetch("projects.md")
+    document.title = title; // Set the document title
+  }, [title]);
+
+  useEffect(() => {
+    fetch("/pages/projects.md")
       .then((res) => res.text())
       .then((text) => setContent(text));
   }, []);

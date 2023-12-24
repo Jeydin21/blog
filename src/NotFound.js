@@ -13,9 +13,14 @@ export default function NotFound() {
 
 const PageComponent = () => {
   const [content, setContent] = useState("");
+  const [title] = useState("Jeydin21 | 404");
 
   useEffect(() => {
-    fetch("404.md")
+    document.title = title; // Set the document title
+  }, [title]);
+
+  useEffect(() => {
+    fetch("/pages/404.md")
       .then((res) => res.text())
       .then((text) => setContent(text));
   }, []);
