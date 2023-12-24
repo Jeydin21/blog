@@ -1,17 +1,40 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import { StrictMode, useEffect, useState } from "react";
+import ReactDOM from "react-dom";
+import { BrowserRouter as Router, Route, Routes, useParams } from "react-router-dom";
+import ReactMarkdown from "react-markdown";
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
+import Home from "./Home";
+import About from "./About";
+
+const routes = [
+  { path: "/", element: <Home />, index: true },
+  { path: "about", element: <About /> },
+  { path: "post/:postId", element: <BlogPost /> },
+];
+
+const rootElement = document.getElementById("root");
+ReactDOM.render(
+  <StrictMode>
+    <Router>
+      <Routes>
+        {routes.map(({ path, element, index = false }, key) => (
+          <Route key={key} path={path} element={element} index={index} />
+        ))}
+      </Routes>
+    </Router>
+  </StrictMode>,
+  rootElement
 );
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+function BlogPost() {
+  const { postId } = useParams();
+  const [content, setContent] = useState("");
+
+  useEffect(() => {
+    fetch(`/pages/${postId}.md`)
+      .then((res) => res.text())
+      .then((text) => setContent(text));
+  }, [postId]);
+
+  return <ReactMarkdown children={content} />;
+}
