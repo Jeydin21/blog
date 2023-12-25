@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import ReactMarkdown from "react-markdown";
+import Markdown from "./components/Markdown";
 import Header from "./components/Header";
 import Border from "./components/Border";
 
@@ -32,9 +32,9 @@ const PageComponent = () => {
 
   return (
     <div className="post">
-      <ReactMarkdown children={upperContent} />
+      <Markdown content={upperContent} />
       <Border />
-      <ReactMarkdown children={lowerContent} />
+      <Markdown content={lowerContent} />
     </div>
   );
 };

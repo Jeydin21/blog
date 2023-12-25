@@ -1,10 +1,10 @@
 import { useEffect, useState } from "react";
-import ReactMarkdown from "react-markdown";
+import Markdown from "./components/Markdown";
 import Header from "./components/Header";
 
-export default function About() {
+export default function Contact() {
   return (
-    <div className="About">
+    <div className="contact">
       <Header />
       <PageComponent />
     </div>
@@ -16,7 +16,7 @@ const PageComponent = () => {
   const [title] = useState("Jeydin21 | Contact");
 
   useEffect(() => {
-    document.title = title;  
+    document.title = title;
   }, [title]);
 
   useEffect(() => {
@@ -25,9 +25,5 @@ const PageComponent = () => {
       .then((text) => setContent(text));
   }, []);
 
-  return (
-    <div className="post">
-      <ReactMarkdown children={content} />
-    </div>
-  );
+  return <Markdown content={content} />;
 };

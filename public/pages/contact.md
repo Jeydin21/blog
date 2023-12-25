@@ -10,7 +10,7 @@ Follow me on Twitter: [@Jeydin21](https://twitter.com/Jeydin21)
 
 ## GitHub
 Check out my projects on GitHub: [Jeydin21](https://github.com/Jeydin21)
-&nbsp;  
-&nbsp;  
-&nbsp;  
+
+<br>
+
 Looking forward to hearing from you!
