@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import ReactMarkdown from "react-markdown";
 import Header from "./components/Header";
+import Border from "./components/Border";
 
 export default function Home() {
   return (
@@ -12,7 +13,8 @@ export default function Home() {
 }
 
 const PageComponent = () => {
-  const [content, setContent] = useState("");
+  const [upperContent, setUpperContent] = useState("");
+  const [lowerContent, setLowerContent] = useState("");
   const [title] = useState("Jeydin21 | Home");
 
   useEffect(() => {
@@ -22,12 +24,17 @@ const PageComponent = () => {
   useEffect(() => {
     fetch("/pages/home.md")
       .then((res) => res.text())
-      .then((text) => setContent(text));
+      .then((text) => setUpperContent(text));
+    fetch("/pages/posts.md")
+      .then((res) => res.text())
+      .then((text) => setLowerContent(text));
   }, []);
 
   return (
     <div className="post">
-      <ReactMarkdown children={content} />
+      <ReactMarkdown children={upperContent} />
+      <Border />
+      <ReactMarkdown children={lowerContent} />
     </div>
   );
 };

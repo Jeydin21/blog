@@ -28,6 +28,7 @@ const Header = () => {
       <Link to="/" style={titleStyle}><h1>Jeydin21</h1></Link>
       <nav>
         <ul style={navStyle}>
+          <h2><li style={itemStyle}><Link to="/posts">Posts</Link></li></h2>
           <h2><li style={itemStyle}><Link to="/projects">Projects</Link></li></h2>
           <h2><li style={itemStyle}><Link to="/contact">Contact</Link></li></h2>
         </ul>
