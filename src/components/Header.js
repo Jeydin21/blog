@@ -1,36 +1,47 @@
 import { Link } from "react-router-dom";
+import { useState } from "react";
+import "./Header.css"; // Import the CSS file
 
 const Header = () => {
-  const headerStyle = {
-    display: 'flex',
-    justifyContent: 'space-between',
-    alignItems: 'center',
-    borderBottom: '1px solid red',
-  };
+  const [showNav, setShowNav] = useState(false);
 
-  const navStyle = {
-    listStyle: 'none',
-    display: 'flex',
-    gap: '20px',
-  };
-
-  const itemStyle = {
-    display: 'inline',
-    color: 'white',
-  };
-
-  const titleStyle = {
-    cursor: 'pointer',
+  const toggleNav = () => {
+    setShowNav(!showNav);
   };
 
   return (
-    <header style={headerStyle}>
-      <Link to="/" style={titleStyle}><h1>Jeydin21</h1></Link>
-      <nav>
-        <ul style={navStyle}>
-          <h2><li style={itemStyle}><Link to="/posts">Posts</Link></li></h2>
-          <h2><li style={itemStyle}><Link to="/projects">Projects</Link></li></h2>
-          <h2><li style={itemStyle}><Link to="/contact">Contact</Link></li></h2>
+    <header>
+      <Link to="/">
+        <h1>Jeydin21</h1>
+      </Link>
+      <div className={`nav-icon ${showNav ? "open" : ""}`} onClick={toggleNav}>
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+      <nav className={`nav ${showNav ? "open" : ""}`}>
+        <ul>
+          <li>
+            <h2>
+              <Link to="/posts" onClick={toggleNav}>
+                Posts
+              </Link>
+            </h2>
+          </li>
+          <li>
+            <h2>
+              <Link to="/projects" onClick={toggleNav}>
+                Projects
+              </Link>
+            </h2>
+          </li>
+          <li>
+            <h2>
+              <Link to="/contact" onClick={toggleNav}>
+                Contact
+              </Link>
+            </h2>
+          </li>
         </ul>
       </nav>
     </header>
