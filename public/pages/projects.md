@@ -8,6 +8,20 @@ A blog I made in React that uses Markdown files to display content on the page
 Since I've been slowly learning how to use Markdown to take notes in class I wanted to try to make a website from Markdown
 </blockquote>
 
+## Munchyroll - [Demo](https://anime.j21.dev)
+<blockquote>
+A simple and fast anime streaming web app made in React
+
+I wanted to figure out a way to watch anime on a managed computer with restrictions
+</blockquote>
+
+## Crypto Comparer - [GitHub](https://github.com/Jeydin21/Crypto-Comparer)
+<blockquote>
+Tracking cryptocurrencies in a Flask web app
+
+This was a project in high school done by students
+</blockquote>
+
 ## Calculator App - [Demo](https://calc.j21.dev) | [GitHub](https://github.com/Jeydin21/Calculator-App)
 <blockquote>
 A web app made with HTML, Tailwind CSS, and JavaScript to bring users a functioning calculator that has dark and light mode support, as well as mobile responsiveness
