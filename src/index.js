@@ -1,7 +1,6 @@
 import { StrictMode } from "react";
 import ReactDOM from "react-dom";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import { Analytics } from '@vercel/analytics/react';
 
 import Home from "./Home";
 import Projects from "./Projects";
@@ -28,7 +27,6 @@ ReactDOM.render(
         ))}
         <Route path="/*" element={<NotFound />} />
       </Routes>
-      <Analytics />
     </Router>
   </StrictMode>,
   rootElement
