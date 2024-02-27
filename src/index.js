@@ -8,6 +8,7 @@ import Contact from "./Contact";
 import Post from "./Post";
 import NotFound from "./NotFound";
 import Posts from "./Posts";
+import Project from "./Project";
 
 const routes = [
   { path: "/", element: <Home />, index: true },
@@ -15,6 +16,7 @@ const routes = [
   { path: "contact", element: <Contact /> },
   { path: "posts", element: <Posts /> },
   { path: "posts/:postId", element: <Post /> },
+  { path: "projects/:projectId", element: <Project /> }
 ];
 
 const rootElement = document.getElementById("root");

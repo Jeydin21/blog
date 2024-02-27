@@ -1,4 +1,13 @@
 # Welcome to My Blog!
 This is a test post btw
 
-You can see how the website page title is dynamic to the title of the post rightttttt ~~that took about 2 hours 😭😭~~
+This is basically the entire link stucture of the website
+```
+.
+├── posts/
+│   └── ...
+├── projects/
+│   └── ...
+└── contact
+```
+Very small website. I hope I can expand it with more stuff

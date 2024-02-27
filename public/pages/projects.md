@@ -1,21 +1,21 @@
 # My Projects
 Here's a list of some of my projects that I've made or am working on in my free time!
 
-## Jeydin21's Blog - [Demo](/) | [GitHub](https://github.com/Jeydin21/blog)
+## My Blog - [Demo](/) | [GitHub](https://github.com/Jeydin21/blog)
 <blockquote>
 A blog I made in React that uses Markdown files to display content on the page
 
 Since I've been slowly learning how to use Markdown to take notes in class I wanted to try to make a website from Markdown
 </blockquote>
 
-## Munchyroll - [Demo](https://anime.j21.dev)
+## Munchyroll - [Post](/projects/munchyroll) | [Demo](https://anime.j21.dev)
 <blockquote>
 A simple and fast anime streaming web app made in React
 
 I wanted to figure out a way to watch anime on a managed computer with restrictions
 </blockquote>
 
-## Crypto Comparer - [GitHub](https://github.com/Jeydin21/Crypto-Comparer)
+## Crypto Comparer - [Post](/projects/crypto) | [GitHub](https://github.com/Jeydin21/Crypto-Comparer)
 <blockquote>
 Tracking cryptocurrencies in a Flask web app
 
